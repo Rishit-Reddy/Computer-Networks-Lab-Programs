@@ -1,5 +1,7 @@
 import socket 
 
+#TCP - Transmission Control Protocol
+
 #create a client socket
 client_socket = socket.socket()
 

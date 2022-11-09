@@ -1,5 +1,7 @@
 import socket 
 
+#TCP - Transmission Control Protocol
+
 #create a socket
 #AF_INET -> IPv4,  #SOCK_STREAM -> TCP 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
