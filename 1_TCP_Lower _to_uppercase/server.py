@@ -1,8 +1,5 @@
 import socket 
 
-def lower_to_upper(text):
-    return text.upper()
-
 #create a socket
 #AF_INET -> IPv4,  #SOCK_STREAM -> TCP 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -23,10 +20,10 @@ while True:
     #the new client socket object is used to send and receive data
     conn, addr = server_socket.accept()
     client_data = conn.recv(1024).decode() # (recv data from the client - arg bufsize:Int) and decode the recieved data
-    text_lowercase = lower_to_upper(client_data)
+    text_uppercase = client_data.upper()
     
     #send the data back to the client
-    conn.send(bytes(text_lowercase, 'utf-8')) # sending byte data encoded as UTF-8
+    conn.send(bytes(text_uupercase, 'utf-8')) # sending byte data encoded as UTF-8
     
     #Close the client connection
     conn.close()
