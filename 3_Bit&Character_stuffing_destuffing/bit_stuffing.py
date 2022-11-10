@@ -15,9 +15,10 @@ def bitStuffing(N, bits):
             bstuff += '0' 
     
     print(bstuff)
-                 
 
 bits = input("Input: ")
 n = len(bits)
 bitStuffing(n, bits)
 
+#example input : 1111111
+#output : 11111011
